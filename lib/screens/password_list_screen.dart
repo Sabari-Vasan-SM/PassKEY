@@ -72,9 +72,10 @@ class _PasswordListScreenState extends State<PasswordListScreen> {
                     const SizedBox(height: 24),
                     Text(
                       'No Passwords Yet',
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                            fontWeight: FontWeight.w700,
-                          ),
+                      style:
+                          Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                fontWeight: FontWeight.w700,
+                              ),
                     ),
                     const SizedBox(height: 8),
                     Padding(
@@ -83,7 +84,8 @@ class _PasswordListScreenState extends State<PasswordListScreen> {
                         'Add your first password to get started',
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: Theme.of(context).textTheme.bodySmall?.color,
+                              color:
+                                  Theme.of(context).textTheme.bodySmall?.color,
                             ),
                       ),
                     ),
@@ -142,8 +144,6 @@ class _PasswordCard extends StatefulWidget {
 }
 
 class _PasswordCardState extends State<_PasswordCard> {
-  bool _showPassword = false;
-
   void _copyToClipboard(String text, String label) {
     Clipboard.setData(ClipboardData(text: text));
     ScaffoldMessenger.of(context).showSnackBar(
@@ -154,7 +154,7 @@ class _PasswordCardState extends State<_PasswordCard> {
         margin: const EdgeInsets.all(16),
       ),
     );
-    
+
     // Auto-clear clipboard after 30 seconds
     Future.delayed(const Duration(seconds: 30), () {
       Clipboard.setData(const ClipboardData(text: ''));
@@ -260,7 +260,9 @@ class _PasswordCardState extends State<_PasswordCard> {
           ),
           TextButton(
             onPressed: () {
-              context.read<PasswordProvider>().deletePassword(widget.password.id!);
+              context
+                  .read<PasswordProvider>()
+                  .deletePassword(widget.password.id!);
               Navigator.pop(context);
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(

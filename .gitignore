@@ -42,6 +42,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/build/
+android/key.properties
+*.jks
+*.keystore
 
 # iOS/macOS
 **/ios/**/*.mode1v3
@@ -59,31 +63,4 @@ app.*.map.json
 **/ios/**/.symlinks/
 **/ios/**/Flutter/Flutter.framework
 **/ios/**/Flutter/Flutter.podspec
-**/ios/**/Flutter/Generated.xcconfig
-**/ios/**/Flutter/ephemeral/
-**/ios/**/Google.plist
-**/ios/**/GeneratedPluginRegistrant.*
-
-# Exceptions to above rules.
-!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
-
-# Web
-lib/generated_plugin_registrant.dart
-
-# Windows
-windows/flutter/generated_plugins.cmake
-windows/flutter/generated_included_plugins.cmake
-windows/flutter/generated_app.rc
-
-# Linux
-linux/flutter/generated_plugin_registrant.cmake
-linux/flutter/generated_plugins.cmake
-
-# macOS
-macos/Flutter/GeneratedPluginRegistrant.swift
-
-# Coverage
-coverage/
-
-# Exceptions to above rules.
-!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+**/ios/**
