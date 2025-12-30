@@ -10,9 +10,6 @@
 .svn/
 migrate_working_dir/
 
-# Ignore HTML files
-*.html
-
 # IntelliJ related
 *.iml
 *.ipr
@@ -46,6 +43,9 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /android/build/
+android/key.properties
+*.jks
+*.keystore
 
 # iOS/macOS
 **/ios/**/*.mode1v3
